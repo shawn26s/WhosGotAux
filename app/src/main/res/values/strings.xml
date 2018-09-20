@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Who\'s Got Aux?</string>
+
+    <string name="record_user_button">Record Last User</string>
+    <string name="user_shawn">Shawn</string>
+    <string name="user_katie">Katie</string>
+    <string name="LAST_PERSON">last_person</string>
+    <string name="LAST_PERSON_DATA">last_person_data</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
