@@ -56,7 +56,11 @@ public class TrackingFragment extends android.support.v4.app.Fragment
                 // Switch the string value for the last user's name
                 String name = (lastPerson) ?
                         getResources().getString(R.string.user_shawn) : getResources().getString(R.string.user_katie);
-                String timeStamp = cd.substring(9, 11) + ":" + cd.substring(11, 13)
+                int hour = Integer.parseInt(cd.substring(9, 11));
+                String amPM = (hour / 12 == 0) ? "AM" : "PM";
+                hour %= 12;
+                hour = (hour == 0) ? 12 : hour;
+                String timeStamp = hour + ":" + cd.substring(11, 13) + " " + amPM
                         + " on " + cd.substring(4, 6) + "/" + cd.substring(6, 8);
                 lastPersonData = name + " last played music at " + timeStamp;
                 editor.putString(getResources().getString(R.string.LAST_PERSON_DATA), lastPersonData);
@@ -93,7 +97,5 @@ public class TrackingFragment extends android.support.v4.app.Fragment
             userImage.setImageDrawable(getResources()
                     .getDrawable(R.drawable.profile_shawn, getResources().newTheme()));
         }
-
     }
-
 }
